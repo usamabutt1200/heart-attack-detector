@@ -29,10 +29,10 @@ input_data = pd.DataFrame([{
     'max_heart_rate': hr
 }])
 
-# Prediction Button with your exact custom messages
+# Prediction Button with Pure English Professional Outputs
 if st.button("Run Heart Diagnosis"):
     prediction = model.predict(input_data)
     if prediction == 1:
-        st.error("🚨 Oy huy! Mareez ko heart attack ho gya hy, foren hospital le jao!")
+        st.error("🚨 CRITICAL ALERT: Heart attack detected! Emergency medical attention required immediately. Please rush the patient to the hospital!")
     else:
-        st.success("✅ Wah! Mareez safe hy, use kuch nahi hua.")
+        st.success("✅ DIAGNOSIS CLEAR: The patient is safe. No signs of a heart attack detected.")
